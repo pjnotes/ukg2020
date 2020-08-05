@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clove | qrkx</title>
+
+
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.14/mmenu.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+
+	<style>
+		*{
+			color: #ddd;
+		}
+		h1,h2,h3,h4,h5,h6{
+			color: #fff;
+		}
+		.ba0 { background: #2B7E7E }
+		.ba1 { background: #76B8B8 }
+		.ba2 { background: #459393 }
+		.ba3 { background: #176C6C }
+		.ba4 { background: #085656 }
+
+		.by0 { background: #D3A447 }
+		.by1 { background: #FFE0A3 }
+		.by2 { background: #F5CA73 }
+		.by3 { background: #B58526 }
+		.by4 { background: #8F640D }
+
+		.br0 { background: #D34747 }
+		.br1 { background: #FFA3A3 }
+		.br2 { background: #F57373 }
+		.br3 { background: #B52626 }
+		.br4 { background: #8F0D0D }
+
+		.ta0 { background: #2B7E7E }
+		.ta1 { background: #76B8B8 }
+		.ta2 { background: #459393 }
+		.ta3 { background: #176C6C }
+		.ta4 { background: #085656 }
+
+		.ty0 { background: #D3A447 }
+		.ty1 { background: #FFE0A3 }
+		.ty2 { background: #F5CA73 }
+		.ty3 { background: #B58526 }
+		.ty4 { background: #8F640D }
+
+		.tr0 { background: #D34747 }
+		.tr1 { background: #FFA3A3 }
+		.tr2 { background: #F57373 }
+		.tr3 { background: #B52626 }
+		.tr4 { background: #8F0D0D }
+
+
+		html {
+			background: #000;
+			color: #ddd;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		#navbar {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: stretch;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			background: #111;
+			height: 8%;
+			width: 100%;
+		}
+
+		.navbar-btn {
+			display: flex;
+			flex-grow: 1;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			box-shadow: inset #ddd4 0 2px;
+			font-size: 1.5em;
+			color: #ddd;
+		}
+
+		#page {
+			padding: 1em 0;
+			padding-bottom: 20vh;
+			background: #222;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
+			min-height: 100vh;
+			width: 100%;
+			position: absolute;
+			top: 50vh;
+			left: 0;
+			z-index: 2;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: #fff;
+		}
+		#pageHead{
+			width: 100%;
+			height: 80vh;
+			position: fixed;
+			top:0;
+			left: 0;
+			z-index: 1;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="page" class="page">
+
+		<div id="pageHead" class="ba0">
+			<h2>Hello</h2>
+		</div>
+
+		<div class="container">
+			<h4>Choose the subject:</h4>
+
+			<div class="row p-3">
+				<div class="col-3 p-0">
+				  <div class="nav flex-column btn-group-vertical" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<a class="btn btn-primary active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+					<a class="btn btn-primary" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+					<a class="btn btn-primary" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+					<a class="btn btn-primary" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+				  </div>
+				</div>
+				<div class="col-9 p-0 w3-black">
+				  <div class="tab-content w3-black" id="v-pills-tabContent">
+					<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">.M.</div>
+					<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">.N.</div>
+					<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">.O.</div>
+					<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+						.P.
+					</div>
+				  </div>
+				</div>
+			</div>
+
+			<div class="my-2 d-flex">
+				<a href="#eng" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Eng
+				</a>
+				<a href="#kan" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Kan
+				</a>
+				<a href="#hin"  class="badge badge-primary ml-1" uk-scroll="offset: 80">Hin
+				</a>
+				<a href="#math" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Math
+				</a>
+				<a href="#gk" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					GK
+				</a>
+				<a href="#draw" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Draw
+				</a>
+				<a href="#rhy" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Rhy
+				</a>
+				<a href="#act" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Act
+				</a>
+			</div>
+
+			<div id="eng" class="card border-primary mb-4">
+				<div class="card-header bg-primary w3-text-bold"><b>English</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-primary">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-primary"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-primary"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="kan" class="card border-success mb-4">
+				<div class="card-header bg-success w3-text-bold"><b>Kannada</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-success">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-success"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-success"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="hin" class="card border-warning mb-4">
+				<div class="card-header bg-warning w3-text-bold"><b>Hindi</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-warning">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-warning"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-warning"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="math" class="card border-info mb-4">
+				<div class="card-header bg-info w3-text-bold"><b>Maths</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-info">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-info"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-info"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="gk" class="card border-danger mb-4">
+				<div class="card-header bg-danger w3-text-bold"><b>GK</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-danger">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-danger"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-danger"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="draw" class="card border-primary mb-4">
+				<div class="card-header bg-primary w3-text-bold"><b>Drawing</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-primary">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-primary"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-primary"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="rhy" class="card border-info mb-4">
+				<div class="card-header bg-info w3-text-bold"><b>Rhymes</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-info">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="ev" type="button" class="btn btn-info"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="act" class="card border-warning mb-4">
+				<div class="card-header bg-warning w3-text-bold"><b>Activity</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-warning">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="ev" type="button" class="btn btn-warning"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="navbar" class="fix">
+		<a href="#menuin" class="navbar-btn"><i class="fa fa-bars"></i></a>
+		<!--div class="navbar-btn"><i class="fa fa-bars"></i></div-->
+		<div class="navbar-btn"><i class="fa fa-home"></i></div>
+		<!--div class="navbar-btn"><i class="fa fa-bars"></i></div-->
+		<div class="navbar-btn"><i class="fa fa-bars"></i></div>
+	</div>
+
+
+	<nav id="menuin">
+		<div id="panel-menuin">
+			<ul>
+				<li><a href="#/">Home</a></li>
+				<li>
+					<span>About us</span>
+					<ul>
+						<li><a href="#/">History</a></li>
+						<li>
+							<span>The team</span>
+							<ul>
+								<li><a href="#/">Management</a></li>
+								<li><a href="#/">Sales</a></li>
+								<li><a href="#/">Development</a></li>
+							</ul>
+						</li>
+						<li><a href="#/">Our address</a></li>
+					</ul>
+				</li>
+				<li><a href="#/">Contact</a></li>
+
+				<li class="Divider">Other demos</li>
+				<li><a href="default.html">Default demo</a></li>
+				<li><a href="onepage.html">One page demo</a></li>
+				<li><a href="default.html">Default demo</a></li>
+				<li><a href="onepage.html">One page demo</a></li>
+				<li><a href="default.html">Default demo</a></li>
+				<li><a href="onepage.html">One page demo</a></li>
+				<li><a href="default.html">Default demo</a></li>
+				<li><a href="onepage.html">One page demo</a></li>
+				<li><a href="default.html">Default demo</a></li>
+				<li><a href="onepage.html">One page demo</a></li>
+				<li><a href="default.html">Default demo</a></li>
+				<li><a href="onepage.html">One page demo</a></li>
+				<li><a href="default.html">Default demo</a></li>
+				<li><a href="onepage.html">One page demo</a></li>
+				<li><a href="default.html">Default demo</a></li>
+				<li><a href="onepage.html">One page demo</a></li>
+			</ul>
+		</div>
+
+		<div id="panel-accountin">
+			<ul>
+				<li><a href="#/">My profile</a></li>
+				<li><a href="#/">Privacy settings</a></li>
+				<li><a href="#/">Activity</a></li>
+				<li><a href="#/">Sign out</a></li>
+			</ul>
+		</div>
+
+		<div id="panel-cartin">
+			<p style="text-align: center; padding-top: 30px;">
+				Your shoppingcart is empty.<br />
+				<a href="#/">Continue shopping.</a>
+			</p>
+		</div>
+	</nav>
+
+	<!-- JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.14/mmenu.polyfills.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.14/mmenu.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+
+	<script src="https://use.fontawesome.com/c2ee0670a8.js"></script>
+
+	<script>
+		new Mmenu("#menuin", {
+			offCanvas: true,
+			extensions: ['theme-dark',],
+			setSelected: true,
+			counters: true,
+			searchfield: {
+				placeholder: 'Search menu items...',
+			},
+			navbars: [{
+				position: 'bottom',
+				content: ['searchfield'],
+			},],
+		}, {
+			searchfield: {
+				clear: true,
+			},
+			navbars: {
+				breadcrumbs: {
+					removeFirst: true,
+				},
+			},
+			classNames: {
+				fixedElements: {
+					fixed: "fix"
+				}
+			}
+		});
+
+		var emobj = {
+			1: {
+				1: "(︶︵︶ )",
+				2: "(︶⸏︶  )",
+				3: "(︶‿︶  )",
+			},
+			2: {
+				1: "(⌒︵⌒ )",
+				2: "(⌒⸏⌒  )",
+				3: "(⌒‿⌒  )",
+			},
+			3: {
+				1: "(˘꒢˘ )",
+				2: "(˘_˘  )",
+				3: "(˘◡˘  )",
+			},
+			4: {
+				1: "(ᵔᵕᵔ  )",
+				2: "(ᵔ_ᵔ  )",
+				3: "(ᵔ᎑ᵔ  )",
+			},
+			5: {
+				1: "(꒡꒢꒡  )",
+				2: "(꒡⸏꒡  )",
+				3: "(꒡‿꒡  )",
+			},
+			6: {
+				1: "(◕︵◕ )",
+				2: "(◕⸏◕  )",
+				3: "(◕‿◕  )",
+			},
+			7: {
+				1: "(o_O  )",
+				2: "(⊙_⊙  )",
+				3: "(⊙‿⊙  )",
+			},
+			8: {
+				1: "(¬︵¬ )",
+				2: "(¬⸏¬  )",
+				3: "(¬‿¬  )",
+			},
+			9: {
+				1: "(☒︵☒  )",
+				2: "(☐⸏☐  )",
+				3: "(☑‿☑  )",
+			},
+			10: {
+				1: "(�︵� )",
+				2: "(✦⸏✦  )",
+				3: "(✦‿✦  )",
+			},
+			11: {
+				1: "(  𑱢 ﹏ 𑱢)",
+				2: "(  𑱢 ︵ 𑱢)",
+				3: "(  𑱢 ‿ 𑱢)",
+				4: "(  𑱢 ⸏ 𑱢)",
+			},
+			12: {
+				1: "(𒊹︵𒊹 )",
+				2: "(𒊹⸏𒊹  )",
+				3: "(𒊹‿𒊹  )",
+			},
+			13: {
+				1: "(𖣘︵𖣘 )",
+				2: "(𖣘⸏𖣘  )",
+				3: "(𖣘‿𖣘  )",
+			},
+			14: {
+				1: "(𖣐︵𖣐 )",
+				2: "(𖣐⸏𖣐  )",
+				3: "(𖣐‿𖣐  )",
+			},
+			15: {
+				1: "(@︵@ )",
+				2: "(@⸏@  )",
+				3: "(@‿@  )",
+			},
+			16: {
+				1: "(᪤︵᪤ )",
+				2: "(᪤⸏᪤  )",
+				3: "(᪤‿᪤  )",
+			},
+			17: {
+				1: "(ꉺ︵ꉺ )",
+				2: "(ꉻ⸏ꉻ  )",
+				3: "(ꄱ‿ꄱ  )",
+			},
+			18: {
+				1: "(Ő︵Ő )",
+				2: "(Ő⸏Ő  )",
+				3: "(Ő‿Ő  )",
+			},
+			19: {
+				1: "(◟_◞  )",
+				2: "(◜⸏◝  )",
+				3: "(◜‿◝  )",
+			},
+			20: {
+				1: "(⩌︵⩌ )",
+				2: "(⩌⸏⩌  )",
+				3: "(⩐‿⩐  )",
+			},
+			21: {
+				1: "(⬒︵⬒ )",
+				2: "(⬒⸏⬒  )",
+				3: "(⬒‿⬒  )",
+			},
+			22: {
+				1: "(⬓︵⬓ )",
+				2: "(⬓⸏⬓  )",
+				3: "(⬓‿⬓  )",
+			},
+			23: {
+				1: "(᰽︵ᰞ )",
+				2: "(o⸏ᰞ  )",
+				3: "(o‿O )",
+			},
+			24: {
+				1: "(㇣︵㇣ )",
+				2: "(㇣⸏㇣  )",
+				3: "(ꄲ‿ꄲ  )",
+			},
+			25: {
+				1: "(ᗌ︵ᗏ  )",
+				2: "(ᗌ⸏ᗏ  )",
+				3: "(ᗌ‿ᗏ  )",
+			},
+			26: {
+				1: "(>︵< )",
+				2: "(>⸏<  )",
+				3: "(>‿<  )",
+			},
+			27: {
+				1: "(*︵* )",
+				2: "(*⸏*  )",
+				3: "(*‿*  )",
+			},
+			28: {
+				1: "(~︵~ )",
+				2: "(~⸏~  )",
+				3: "(~‿~ )",
+			},
+			29: {
+				1: "(#︵# )",
+				2: "(#⸏#  )",
+				3: "(#‿#  )",
+			},
+			30: {
+				1: "(^︵^ )",
+				2: "(^⸏^  )",
+				3: "(^‿^  )",
+			},
+			31: {
+				1: "(×︵× )",
+				2: "(×⸏×  )",
+				3: "(×‿×  )",
+			},
+			32: {
+				1: "(°︵° )",
+				2: "(°⸏°  )",
+				3: "(°‿°  )",
+			},
+			33: {
+				1: "(`︵` )",
+				2: "(`⸏`  )",
+				3: "(`‿`  )",
+			},
+			34: {
+				1: "(﹌︵﹌  )",
+				2: "(﹋⸏﹋  )",
+				3: "(︶‿︶  )",
+			},
+			35: {
+				1: "(・︵・ )",
+				2: "(・⸏・  )",
+				3: "(・‿・  )",
+			},
+			36: {
+				1: "(𐄂︵𐄂 )",
+				2: "(𐄂⸏𐄂  )",
+				3: "(𐄂‿𐄂  )",
+			},
+			37: {
+				1: "(ꤥ︵ꤥ  )",
+				2: "(ꤥ⸏ꤥ  )",
+				3: "(ꤥ‿ꤥ  )",
+			},
+			38: {
+				1: "(⦸︵⦸ )",
+				2: "(⦸⸏⦸  )",
+				3: "(⦸‿⦸  )",
+			},
+			39: {
+				1: "(⦷︵⦷ )",
+				2: "(⦷⸏⦷  )",
+				3: "(⦷‿⦷  )",
+			},
+			40: {
+				1: "(𐅁𐅀︵𐅁𐅀 )",
+				2: "(𐅁𐅀⸏𐅁𐅀  )",
+				3: "(𐅁𐅀‿𐅁𐅀  )",
+			},
+			41: {
+				1: "(⬦︵⬨ )",
+				2: "(⬥⸏⬧  )",
+				3: "(⬥‿⬧  )",
+			},
+			42: {
+				1: "(⏑︵⏑ )",
+				2: "(⏑⸏⏑  )",
+				3: "(⏑‿⏑  )",
+			},
+			43: {
+				1: "(ᐞ︵ᐞ )",
+				2: "(ᐞ⸏ᐞ  )",
+				3: "(ᐞ‿ᐞ  )",
+			},
+			44: {
+				1: "(ᰟ︵ᰟ )",
+				2: "(ᰟ⸏ᰟ  )",
+				3: "(ᰟ‿ᰟ  )",
+			}
+		}
+
+		let navMsgObj = {
+			1: {
+				brand: "GMail",
+				linkloc: "https://www.google.com/gmail/"
+			},
+			2: {
+				brand: "Wikipedia",
+				linkloc: "https://www.wikipedia.org/"
+			},
+			3: {
+				brand: "Flickity",
+				linkloc: "https://flickity.metafizzy.co/"
+			},
+			4: {
+				brand: "Draggabilly",
+				linkloc: "https://draggabilly.desandro.com/"
+			},
+			5: {
+				brand: "jQuery",
+				linkloc: "https://jquery.com/"
+			},
+			6: {
+				brand: "Google Fonts",
+				linkloc: "https://fonts.google.com/"
+			},
+			7: {
+				brand: "Mozilla",
+				linkloc: "https://www.mozilla.org/"
+			},
+			8: {
+				brand: "W3 CSS",
+				linkloc: "https://www.w3schools.com/w3css/"
+			},
+			9: {
+				brand: "Linux Mint",
+				linkloc: "https://www.linuxmint.com/"
+			},
+			10: {
+				brand: "UI Kit",
+				linkloc: "https://getuikit.com/"
+			},
+			11: {
+				brand: "DuckDuckGo",
+				linkloc: "https://duckduckgo.com/"
+			},
+			12: {
+				brand: "G Suite",
+				linkloc: "https://gsuite.google.com/"
+			},
+			13: {
+				brand: "G Drive",
+				linkloc: "https://www.google.com/drive/"
+			},
+			14: {
+				brand: "G Suite",
+				linkloc: "https://gsuite.google.com/essentials/"
+			},
+			15: {
+				brand: "Libre Office",
+				linkloc: "https://www.libreoffice.org/"
+			},
+			16: {
+				brand: "GNU",
+				linkloc: "https://www.gnu.org/#mission-statement"
+			}
+		}
+
+		function random1to(n) {
+			return (Math.floor(Math.random() * n) + 1);
+		}
+
+		function putNavMsg() {
+			var navMsgObjLen = Object.keys(navMsgObj).length;
+			var msgnum = 1;
+			msgnum = random1to(navMsgObjLen)
+			$("#navFooterMsg2").html("Special Tanks to, &nbsp; <a href='" +
+				navMsgObj[msgnum].linkloc + "'>" +
+				navMsgObj[msgnum].brand + "</a>");
+		}
+		putNavMsg();
+
+		function putEmo() {
+			var emobjLen = Object.keys(emobj).length;
+			$("#pageSlideCountIndi").html(emobj[random1to(emobjLen)][3]);
+		}
+		putEmo();
+	//	$("#pageSlideCountIndi").html( emobj[23][3] );
+
+
+	</script>
+</body>
+
+</html>

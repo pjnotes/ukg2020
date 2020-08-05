@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB | Home</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.14/mmenu.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="qrkx.css">
+    
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html,body{
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: #222;
+        }
+        #nav{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: stretch;
+            width: 100%;
+            height: 8%;
+            background: #222;
+            box-shadow: inset #ddd4 0 2px;
+            z-index: 80;
+        }
+        #nav > a{
+            display: flex;
+            flex-grow: 1;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+        }
+        #pageHead{
+            background: #222;
+            width: 100%;
+            height: 60vh;
+            position: fixed;
+            top: 0; left: 0;
+            z-index: 10;
+        }
+        #mainPage{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 20;
+            width: 100%;
+            min-height: 92vh;
+            background: transparent;
+        }
+        #mascot{
+            height: 60vh;
+            height: 60vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+        #mascot > img{
+            z-index: 30;
+        }
+        #mainContent{
+            position: relative;
+            top: -22px;
+            border-radius: 10px 10px 0 0;
+            min-height: 40vh;
+            padding: 10vh 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="nav">
+		<a href="#menuin" class="navbar-btn"><i class="fa fa-bars"></i></a>
+		<!--div class="navbar-btn"><i class="fa fa-bars"></i></div-->
+		<a href="#menuin" class="navbar-btn"><i class="fa fa-home"></i></a>
+		<!--div class="navbar-btn"><i class="fa fa-bars"></i></div-->
+		<a href="#menuin" class="navbar-btn"><i class="fa fa-bars"></i></a>
+    </div>
+    <div id="pageHead" class="py-3" uk-parallax="y:-100; opacity:1,0">
+        <div class="container p-2">
+            <h3 class="ta1">Masoom Bachpan</h3>
+            <p class="lead">Welcome to #masoomBachpan.</p>
+            <p>The site that'll guide you through, not just your home-work but the whole academic year.</p>
+        </div>
+    </div>
+    <div id="mainPage">
+        <div id="mascot">
+            <img src="mascot.png" alt="Mascot Image" width="200" height="auto"/>
+        </div>
+        <div id="mainContent" class="ba0 container">
+            <h4>Select the Subject:</h4>
+
+
+			<div class="my-2 d-flex">
+				<a href="#eng" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Eng
+				</a>
+				<a href="#kan" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Kan
+				</a>
+				<a href="#hin"  class="badge badge-primary ml-1" uk-scroll="offset: 80">Hin
+				</a>
+				<a href="#math" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Math
+				</a>
+				<a href="#gk" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					GK
+				</a>
+				<a href="#draw" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Draw
+				</a>
+				<a href="#rhy" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Rhy
+				</a>
+				<a href="#act" class="badge badge-primary ml-1" uk-scroll="offset: 80">
+					Act
+				</a>
+			</div>
+
+			<div id="eng" class="card ba0 border-primary mb-5">
+				<div class="card-header bg-primary w3-text-bold"><b>English</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-primary">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-primary"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-primary"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="kan" class="card ba0 border-success mb-5">
+				<div class="card-header bg-success w3-text-bold"><b>Kannada</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-success">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-success"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-success"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="hin" class="card ba0 border-warning mb-5">
+				<div class="card-header bg-warning w3-text-bold"><b>Hindi</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-warning">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-warning"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-warning"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="math" class="card ba0 border-info mb-5">
+				<div class="card-header bg-info w3-text-bold"><b>Maths</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-info">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-info"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-info"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="gk" class="card ba0 border-danger mb-5">
+				<div class="card-header bg-danger w3-text-bold"><b>GK</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-danger">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-danger"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-danger"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="draw" class="card ba0 border-primary mb-5">
+				<div class="card-header bg-primary w3-text-bold"><b>Drawing</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-primary">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="en" type="button" class="btn btn-primary"><i class="fas fa-book"></i><br>
+							<small>Notebook</small></button>
+						<button data-vj="ev" type="button" class="btn btn-primary"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="rhy" class="card ba0 border-info mb-5">
+				<div class="card-header bg-info w3-text-bold"><b>Rhymes</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-info">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="ev" type="button" class="btn btn-info"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+			<div id="act" class="card ba0 border-warning mb-5">
+				<div class="card-header bg-warning w3-text-bold"><b>Activity</b></div>
+				<div class="card-body px-1">
+					<div class="btn-group btn-group-lg d-flex" role="group" aria-label="Basic example">
+						<button data-vj="et" type="button" class="btn btn-warning">
+							<i class="fas fa-book-open"></i><br>
+							<small>Textbook</small>
+						</button>
+						<button data-vj="ev" type="button" class="btn btn-warning"><i class="fab fa-youtube"></i><br>
+							<small>Video</small></button>
+					</div>
+				</div>
+			</div>
+
+        </div>
+    </div>
+
+    <nav id="menuin">
+		<div id="panel-menuin">
+			<ul>
+				<li><a href="#/">Home</a></li>
+                <li class="Divider">Classes</li>
+				<li>
+					<span>UKG</span>
+					<ul>
+						<li>
+							<span>English</span>
+							<ul>
+								<li><a href="#/"><i class="fas fa-book-open"></i> &nbsp; &nbsp;English TextBook</a></li>
+								<li><a href="#/"><i class="fas fa-book"></i> &nbsp; &nbsp;English FairBook</a></li>
+								<li><a href="#/"><i class="fab fa-youtube"></i> &nbsp; &nbsp;English Videos</a></li>
+							</ul>
+						</li>
+						<li>
+							<span>Kannada</span>
+							<ul>
+								<li><a href="#/"><i class="fas fa-book-open"></i> &nbsp; &nbsp;Kannada TextBook</a></li>
+								<li><a href="#/"><i class="fas fa-book"></i> &nbsp; &nbsp;Kannada FairBook</a></li>
+								<li><a href="#/"><i class="fab fa-youtube"></i> &nbsp; &nbsp;Kannada Videos</a></li>
+							</ul>
+						</li>
+						<li>
+							<span>Hindi</span>
+							<ul>
+								<li><a href="#/"><i class="fas fa-book-open"></i> &nbsp; &nbsp;Hindi TextBook</a></li>
+								<li><a href="#/"><i class="fas fa-book"></i> &nbsp; &nbsp;Hindi FairBook</a></li>
+								<li><a href="#/"><i class="fab fa-youtube"></i> &nbsp; &nbsp;Hindi Videos</a></li>
+							</ul>
+						</li>
+						<li>
+							<span>Maths</span>
+							<ul>
+								<li><a href="#/"><i class="fas fa-book-open"></i> &nbsp; &nbsp;Maths TextBook</a></li>
+								<li><a href="#/"><i class="fas fa-book"></i> &nbsp; &nbsp;Maths FairBook</a></li>
+								<li><a href="#/"><i class="fab fa-youtube"></i> &nbsp; &nbsp;Maths Videos</a></li>
+							</ul>
+						</li>
+						<li>
+							<span>GK</span>
+							<ul>
+								<li><a href="#/"><i class="fas fa-book-open"></i> &nbsp; &nbsp;GK TextBook</a></li>
+								<li><a href="#/"><i class="fas fa-book"></i> &nbsp; &nbsp;GK FairBook</a></li>
+								<li><a href="#/"><i class="fab fa-youtube"></i> &nbsp; &nbsp;GK Videos</a></li>
+							</ul>
+						</li>
+						<li>
+							<span>Rhymes</span>
+							<ul>
+								<li><a href="#/"><i class="fas fa-book-open"></i> &nbsp; &nbsp;Rhymes TextBook</a></li>
+								<li><a href="#/"><i class="fas fa-book"></i> &nbsp; &nbsp;Rhymes FairBook</a></li>
+								<li><a href="#/"><i class="fab fa-youtube"></i> &nbsp; &nbsp;Rhymes Videos</a></li>
+							</ul>
+						</li>
+						<li>
+							<span>Drawing</span>
+							<ul>
+								<li><a href="#/"><i class="fas fa-book-open"></i> &nbsp; &nbsp;Drawing TextBook</a></li>
+								<li><a href="#/"><i class="fas fa-book"></i> &nbsp; &nbsp;Drawing FairBook</a></li>
+								<li><a href="#/"><i class="fab fa-youtube"></i> &nbsp; &nbsp;Drawing Videos</a></li>
+							</ul>
+						</li>
+						<li>
+							<span>Activity</span>
+							<ul>
+								<li><a href="#/"><i class="fas fa-book-open"></i> &nbsp; &nbsp;Activity TextBook</a></li>
+								<li><a href="#/"><i class="fas fa-book"></i> &nbsp; &nbsp;Activity FairBook</a></li>
+								<li><a href="#/"><i class="fab fa-youtube"></i> &nbsp; &nbsp;Activity Videos</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div id="panel-accountin">
+			<ul>
+				<li><a href="#/">My profile</a></li>
+				<li><a href="#/">Privacy settings</a></li>
+				<li><a href="#/">Activity</a></li>
+				<li><a href="#/">Sign out</a></li>
+			</ul>
+		</div>
+
+		<div id="panel-cartin">
+			<p style="text-align: center; padding-top: 30px;">
+				Your shoppingcart is empty.<br />
+				<a href="#/">Continue shopping.</a>
+			</p>
+		</div>
+	</nav>
+
+
+	<!-- JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.14/mmenu.polyfills.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.14/mmenu.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+
+    <script src="https://use.fontawesome.com/c2ee0670a8.js"></script>
+    
+
+	<script>
+		new Mmenu("#menuin", {
+			offCanvas: true,
+			extensions: ['theme-dark',],
+			setSelected: true,
+			counters: true,
+			searchfield: {
+				placeholder: 'Search menu items...',
+			},
+			navbars: [{
+				position: 'bottom',
+				content: ['searchfield'],
+			},],
+		}, {
+			searchfield: {
+				clear: true,
+			},
+			navbars: {
+				breadcrumbs: {
+					removeFirst: true,
+				},
+			},
+			classNames: {
+				fixedElements: {
+					fixed: "fix"
+				}
+			}
+		});
+
+		function random1to(n) {
+			return (Math.floor(Math.random() * n) + 1);
+        }
+
+	</script>
+</body>
+</html>
